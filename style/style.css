@@ -45,15 +45,21 @@ main {
 }
 
 .subhover {
-    display: none;
+    visibility: hidden;
     position: absolute;
+    margin-top: -100%;
+    z-index: -1;
     top: 100%;
     left: 0;
+    transition: margin-top .3s linear;
 }
 
-.posLeft{
+.posLeft {
     top: 0;
     left: 100%;
+    margin-top: 0%;
+    opacity: 0;
+    transition: opacity .4s linear;
 }
 
 li:hover>a {
@@ -61,5 +67,7 @@ li:hover>a {
 }
 
 .header__submenu__item:hover > .subhover {
-    display: block;
+    visibility: visible;
+    margin-top: 0;
+    opacity: 1;
 }
